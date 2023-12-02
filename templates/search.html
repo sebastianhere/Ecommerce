@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}HOME{% endblock %}
+
+{% block product %}
+
+<h1>{{qr}}</h1>
+
+{% if pr  %}
+{% for word in pr %}
+<a>{{word.pname}}</a>
+<a>{{word.pro_desc}}</a>
+<img src="{{word.img}}">
+{% endfor %}
+
+{% else %}
+<h1 style="color:red;">No Search Results Found....!!</h1>
+{% endif %}
+
+{% endblock %}
+
+
